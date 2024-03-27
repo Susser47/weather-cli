@@ -2,12 +2,10 @@
 
 current-dir=$PWD
 
-sudo -i     #* accessing root shell
 
-
-apt update
-apt install curl -y
-apt install wget -y
+sudo apt update
+sudo apt install curl -y
+sudo apt install wget -y
 
 cd ~
 
@@ -37,12 +35,10 @@ echo "$userCity" > my-city.txt
 cd ~
 touch .bash_aliases
 
-echo "wtr='sh ~/.scripts/weather-cli/weather.sh'" > .bash_aliases
+echo "alias wtr='sh ~/.scripts/weather-cli/weather.sh'" >> .bash_aliases
 
 
-exit    #* this is to exit sudo mode
-cd $current-dir
+cd "$current-dir"
 
 
 echo "installation completed"
-echo "reboot the system"
