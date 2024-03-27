@@ -4,7 +4,8 @@ echo
 
 
 echo "your city: "
-localWeather=$(curl -s http://wttr.in/$x?format=3)
+localCity=$(cat ~/.scripts/weather-cli/my-city.txt)
+localWeather=$(curl -s http://wttr.in/$localCity?format=3)
 echo "the weather for $localWeather"
 
 echo
