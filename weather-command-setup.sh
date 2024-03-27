@@ -1,57 +1,44 @@
 #!/bin/bash
 
-sudo -i     # accessing root shell
+current-dir=$PWD
 
-# installing dependencies
+sudo -i     #* accessing root shell
+
+
 apt update
 apt install curl -y
-apt install inetutils-ping -y
+apt install wget -y
 
-cd ~     # going to home
+cd ~
 
-touch .bash_aliases
 mkdir .scripts
 
 cd .scripts
-mkdir weather
+mkdir weather-cli
 
-cd weather
-touch weather.sh
+cd weather-cli
 
-# all different cities
+wget https://github.com/Susser47/weather-cli/weather.sh
+
+# creating all different city files
 touch my-city.txt
 touch local-cities.txt
 touch foreign-cities.txt
 
 
-# ask the user its city
+# ask the user his city
 echo -n "in what city are you?: "
 read userCity
 
 echo "$userCity" > my-city.txt
 
 
-# code for the script to get the weather
-echo "#!/bin/bash
+# creating bash aliases
+cd ~
+touch .bash_aliases
 
-echo "your city: "
-localWeather=$(curl -s http://wttr.in/$x?format=3)
-echo "the weather for $localWeather"
-
-
-echo "local cities: "
-for x in $(cat ~/.scripts/weather/local-cities.txt);
-do
-        weather=$(curl -s http://wttr.in/$x?format=3)
-        echo "the weather for $weather"
-done
+echo "wtr='sh ~/.scripts/weather-cli/weather.sh'" > .bash_aliases
 
 
-echo "foreign cities: "
-for x in $(cat ~/.scripts/weather/foreign-cities.txt);
-do
-        weather=$(curl -s http://wttr.in/$x?format=3)
-        echo "the weather for $weather"
-done" > weather.sh
-
-# TODO: finish with aliases and evrithing else
+exit    #* this is to exit sudo mode
+cd $current-dir
