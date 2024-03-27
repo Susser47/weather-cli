@@ -14,7 +14,7 @@ sudo apt install wget
 and then install the setup script with: 
 
 ```bash
-
+sudo wget https://github.com/Susser47/weather-cli/blob/main/app/setup-script/weather-cli-app-setup.sh
 ```
 
 after installing the script, run it and it will automatically setup evrithing.  
