@@ -18,7 +18,7 @@ mkdir weather-cli
 
 cd weather-cli
 
-wget https://github.com/Susser47/weather-cli/weather.sh
+wget # TODO: add link
 
 # creating all different city files
 touch my-city.txt
@@ -42,3 +42,7 @@ echo "wtr='sh ~/.scripts/weather-cli/weather.sh'" > .bash_aliases
 
 exit    #* this is to exit sudo mode
 cd $current-dir
+
+
+echo "installation completed"
+echo "reboot the system"
