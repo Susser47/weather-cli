@@ -16,7 +16,7 @@ mkdir weather-cli
 
 cd weather-cli
 
-wget https://github.com/Susser47/weather-cli/blob/main/app/weather.sh
+wget https://raw.githubusercontent.com/Susser47/weather-cli/main/app/weather.sh
 
 # creating all different city files
 touch my-city.txt
