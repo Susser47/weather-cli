@@ -1,4 +1,6 @@
 # weather-cli
+Simple CLI application to get the weather directly from your terminal, no API key required.
+
 ## how to setup
 To setup the application there are two ways:  
 1. manually write all of the commands present in the setup script  
@@ -42,6 +44,3 @@ the local cities are in the file `local-cities.txt`
 foreign cities are in the `foreign-cities.txt` file  
 
 > all of these files are found in `~/.scripts/weather-cli/`  
-
-## info  
-this is an application to get the weather directly from your terminal without serching all of the different websites
